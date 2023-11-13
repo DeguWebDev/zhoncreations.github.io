@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'OptimusPrinceps';
+    src: url('fonts/optimusprinceps.woff2') format('woff2'),
+         url('fonts/optimusprinceps.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    position: relative;
+}
+
+.sr {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: #CCC;
+}
+a:hover {
+    color: #FFF;
+}
+
+a.btn {
+    color: #FFF;
+    background: #953532;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    min-width: 180px;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: none!important;
+}
+a.btn:hover {
+    color: #FFF;
+    background: #000;
+}
+
+h1, h2, h3, h4, h5, h6, a.btn {
+    font-family: 'OptimusPrinceps', Arial, sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+h2, h3 {
+    font-size: 28px;
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0 15px;
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    z-index: 99;
+}
+header a {
+    display: block;
+}
+header a img {
+    display: inline-block;
+    width: 400px;
+}
+
+.homecolumns {
+    display: flex;
+    gap: 5px;
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
+    text-align: center;
+}
+.homecolumns .column {
+    width: 50%;
+    flex-basis: 50%;
+    padding: 50vh 30px 60px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+}
+.homecolumns .column h3, .homecolumns .column p, .homecolumns .column a {
+    position: relative;
+    z-index: 2;
+}
+.homecolumns .column::before {
+    content: '';
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
+    gap: 60px;
+    padding: 60px 30px 30px;
+}
+.about a {
+    font-weight: bold;
+}
+.about .caption {
+    display: block;
+    font-size: 12px;
+    color: #999;
+}
+.about h2 {
+    margin-top: 0;
+}
+.about h3 {
+    font-size: 22px;
+}
+
+iframe {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: none!important;
+}
+
+
+.innerpage {
+    padding: 230px 30px 30px;
+}
+
+
+footer {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+footer #social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+footer #social a {
+    display: block;
+}
+footer #social a svg {
+    height: 36px;
+    fill: #FFF
+}
+footer #social a:hover svg {
+    fill: #CCC;
+}
+footer #copyr {
+    font-size: 14px;
+    text-align: right;
+    margin: 0;
+}
+footer #copyr small {
+    display: block;
+    color: #ccc;
+    font-size: 13px;
+}
+footer #copyr small a {
+    text-decoration: none;
+}
+
+@media (max-width: 1400px) {
+    .about {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .about .column {
+        order: 1!important;
+    }
+    .txtcol {
+        flex-basis: 100%!important;
+        width: 100%;
+    }
+    .fbcol, .imgcol {
+        flex-basis: 40%!important;
+        flex-basis: Calc(50% - 15px)!important;
+    }
+}
+@media (max-width: 786px) {
+    a.btn {
+        min-width: 150px;
+    }
+    .homecolumns .column {
+        padding: 400px 15px 30px;
+    }
+    .homecolumns .column h3 span {
+        display: block;
+    }
+    .about {
+        flex-direction: column;
+        padding: 30px 15px 30px;
+    }
+    /*.fbcol iframe {
+        height: 400px!important;
+    }*/
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    footer #copyr {
+        text-align: center;
+    }
+}
+@media (max-width: 586px) {
+    header img {
+        width: 300px;
+    }
+    h2, h3 {
+        font-size: 24px;
+    }
+    .about h3 {
+        font-size: 20px;
+    }
+    a.btn {
+        display: block;
+        min-width: 0;
+        font-size: 16px;
+        padding: 10px;
+        line-height: 15px;
+    }
+    .homecolumns {
+        gap: 2px;
+    }
+    .homecolumns .column h3 {
+        font-size: 20px;
+    }
+    .homecolumns .column p {
+        display: none;
+    }
+}
+
